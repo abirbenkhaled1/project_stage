@@ -8,8 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
-
-
+import { authInterceptorProviders } from './helpers/auth.interceptor';
 
 const routes: Routes = [];
 
@@ -26,7 +25,7 @@ const routes: Routes = [];
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
